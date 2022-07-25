@@ -1,0 +1,74 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="title">Encuesta FreeCodeCamp</h1>
+        <p id="description">Gracias por tomarte un tiempo para ayudarnos a mejorar la plataforma</p>
+    </header>
+    <main>
+        <form id="survey-form">
+            <div id="mi-informacion">
+
+                <label for="name" id="name-label">Nombre</label>
+                <input type="text" name="name" id="name" placeholder="Introduce tu nombre" required>
+
+                <label for="e-mail" id="email-label">E-mail</label>
+                <input type="email" name="e-mail" id="email" placeholder="Ingrese su email" required>
+
+                <label for="number" id="number-label">Edad</label>
+                <input type="number" name="number" id="number" min="10" max="99" placeholder="Ingrese su edad">
+
+                <label for="ocupation">Cual opcion es la que mejor describe tu ocupacion?</label>
+                <select id="dropdown">
+                        <option disabled selected>Selecciona tu ocupacion</option>
+                        <option>Estudiante</option>
+                        <option>Trabajo a tiempo completo</option>
+                        <option >Estudiante a tiempo completo</option>
+                        <option>Prefiero no decirlo</option>
+                        <option>Otro...</option>
+                    </select>
+
+            </div>
+            <div id="encuesta">
+
+                <label class="subtitle">Recomendarias FreeCodeCamp a un amigo?</label>
+                <label class="first"><input type="radio" name="recomedar" value="definitivamente"> Definitivamente</label>
+                <label><input type="radio" name="recomedar" value="quizas"> Quizas</label>
+                <label><input type="radio" name="recomedar" value="no-estoy-seguro"> No estoy seguro</label>
+
+                <label class="subtitle">Que te gustaria ver?</label>
+                <label class="first"><input type="checkbox" name="preferencia" value="front-end-proyects"> Proyectos Front-End</label>
+                <label><input type="checkbox" name="preferencia" value="back-end-proyects"> Proyectos Back-End</label>
+                <label><input type="checkbox" name="preferencia" value="data-visualization"> Visualizacion de datos</label>
+                <label><input type="checkbox" name="preferencia" value="challenges"> Retos</label>
+                <label><input type="checkbox" name="preferencia" value="videos"> Videos</label>
+                <label><input type="checkbox" name="preferencia" value="wiki"> Wiki</label>
+                <label><input type="checkbox" name="preferencia" value="forum"> Forum</label>
+
+                <label class="subtitle">Algun comentario o sugerencia?</label>
+                <textarea class="first" name="comment" id="comment" cols="" rows="" placeholder="Escriba su comentario o sugerencia aqui"></textarea>
+
+            </div>
+            <input class="btn" type="submit" id="submit" value="Enviar">
+        </form>
+    </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
